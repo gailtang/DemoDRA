@@ -21,10 +21,11 @@ pipeline {
                 // get git commit from Jenkins
                 GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
                 GIT_BRANCH = 'master'
-                GIT_REPO = 'https://github.com/xunrongli-ibm/DemoDRA/'
+                GIT_REPO = 'https://github.com/gailtang/DemoDRA/'
             }
             steps {
                 echo "building"
+                echo $IBM_CLOUD_DEVOPS_API_KEY
             }
             // post build section to use "publishBuildRecord" method to publish build record
             post {
