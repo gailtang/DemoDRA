@@ -25,7 +25,7 @@ pipeline {
             }
             steps {
                 echo "building1111"
-                echo $IBM_CLOUD_DEVOPS_API_KEY
+                echo "$IBM_CLOUD_DEVOPS_API_KEY"
             }
             // post build section to use "publishBuildRecord" method to publish build record
             post {
